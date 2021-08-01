@@ -8,11 +8,19 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+    let fact = 1;
+    if (n === 0) {
+        return 1;
+    }
+    else {
+        for (let i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        return fact;
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
-
 console.log(factorial(0)); // 1
 console.log(factorial(1)); // 1
 console.log(factorial(6)); // 720

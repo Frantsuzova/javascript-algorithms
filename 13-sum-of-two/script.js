@@ -9,8 +9,21 @@
 */
 
 function sumOfTwo(arr, sum) {
-    // Напишите код здесь
+    let start = 0;
+    let end = arr.length - 1;
+    while (start < end) {
+        let s = arr[start] + arr[end];
+        if (s > sum) {
+            end -= 1;
+        } else if (s < sum) {
+            start += 1;
+        } else {
+            return true;
+        };
+    };
+    return false;
 }
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

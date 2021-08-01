@@ -14,7 +14,12 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    for (let i = 0; i < (str.length / 2); i++) {
+        if (str.toLowerCase()[i] !== str.toLowerCase()[str.length - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
@@ -26,7 +31,7 @@ console.log(palindrome('привет')); // false
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,
  * но пробелы и знаки препинания не учитывает. Например:
- * 
+ *
  * palindrome('О, лета тело!'); // true
- * 
+ *
 */

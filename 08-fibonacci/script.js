@@ -9,9 +9,22 @@
 */
 
 function fibonacci(n) {
-    // Напишите код здесь
+    let sum = 0;
+    let fibonacci = [0, 1]; // первые два элемента последовательности Фибоначчи
+    for (i = 2; i < n; i++) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+    }
+    if (n === 1) {
+        return 1;
+    }
+    else if (n === 0) {
+        return 0;
+    }
+    else {
+        return fibonacci[fibonacci.length - 1];
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(fibonacci(4)); // 2. Четвёртое число последовательности — двойка (0, 1, 1, 2)
+console.log(fibonacci(0)); // 2. Четвёртое число последовательности — двойка (0, 1, 1, 2)
